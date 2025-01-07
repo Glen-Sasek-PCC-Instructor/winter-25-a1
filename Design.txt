@@ -2,24 +2,110 @@ Program Name:
 
 Program Description:
 
-
 Design:
 A. INPUT
 Define the input variables including name data type. 
+// Read the employee ID number (an int) from the user
+int employeeId = 0; 
+
+// Read the number of hours worked (an int) from the user
+int hoursWorked = 0;
+
+// Read the hourly rate (an int) from the user
+int hourlyRate = 0;
+
+// Read the federal withholding rate (an int, e.g., 10)
+int federalWitholdingRate = 0;
 
 B. OUTPUT
 Define the output variables including data types. 
 
+Total Gross Pay: $680
+int totalGrossPay = 0;
+
+Federal Tax Withholding: $102
+int federalTaxWitholding = 0;
+
+Net Pay: $578
+int netPay = 0;
+
 C. CALCULATIONS
 Describe calculations used by algorithms in step D.  
 List all formulas. 
+
 If there are no calculations needed, state there are no calculations.
+totalGrossPay = hoursWorked * hourlyRate;
+federalTaxWitholding = totalGrossPay * (federalWitholdingRate / 100.0);
+netPay = totalGrossPay - federalTaxWitholding;
 
 D. LOGIC and ALGORITHMS
 Design the logic of your program using pseudocode or flowcharts. 
 Use conditionals, loops, functions or array constructs.
 List the steps in transforming inputs into outputs. 
 
+MESSAGE "Welcome to my Weekly Payroll program!!"
+
+PROMPT  "Enter your employee ID number (numbers only): "
+INPUT  employeeId
+
+PROMPT  "Enter number of hours worked (whole numbers): "
+INPUT  hoursWorked
+
+PROMPT  "Enter the hourly rate: "
+INPUT  hourlyRate
+
+PROMPT  "Enter the federal withholding rate:  "
+INPUT  federalWitholdingRate
+
+DO CALCULATIONS
+
+MESSAGE "Your Payroll Summary:"
+
+LABEL "Total Gross Pay: "
+DATA  totalGrossPay
+
+LABEL "Federal Tax Withholding:  "
+DATA  federalTaxWitholding
+
+LABEL "Net Pay:  "
+DATA  netPay
+
+MESSAGE "Thank you for using my Weekly Payroll program!!"
+
+
+
 
 SAMPLE RUNS
 Copy from assignment document.
+
+Welcome to my Weekly Payroll program!!
+Enter your employee ID number (numbers only): 34567
+Enter number of hours worked (whole numbers): 40
+Enter the hourly rate: 17
+Enter the federal withholding rate: 15
+
+Your Payroll Summary:
+Total Gross Pay: $680
+Federal Tax Withholding: $102
+Net Pay: $578
+
+Thank you for using my Weekly Payroll program!!
+
+
+
+
+Welcome to my Weekly Payroll program!!
+Enter your employee ID number (numbers only): 12345
+Enter number of hours worked (whole numbers): 30
+Enter the hourly rate: 22
+Enter the federal withholding rate: 10
+
+Your Payroll Summary:
+Total Gross Pay: $660
+Federal Tax Withholding: $66
+Net Pay: $594
+
+Thank you for using my Weekly Payroll program!!
+
+
+
